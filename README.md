@@ -15,13 +15,14 @@ A lightweight Streamlit demo that enables **question answering over Turkish acad
 - Basic hallucination control via strict system rules
 
 ## Project Structure
+```
 .
 ├─ app.py # Streamlit UI + RAG pipeline
 ├─ requirements.txt # Python dependencies
 ├─ .env # API key (not committed)
 ├─ data/ # Put your PDFs here (PDFs not committed)
 └─ app_state.json # Local state (vector store id, etc.; not committed)
- 
+``` 
 > Add your own PDFs under `data/` to test the app.
 
 ---
@@ -55,18 +56,19 @@ If PowerShell blocks venv activation, you can run Streamlit via the venv python 
 ```
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
-How to Use
-Put text-selectable (non-scanned) PDFs into the data/ folder.
-Open the app and click “PDF’leri indeksle” once.
-Ask a question in Turkish (or pick a quick question from the sidebar).
 
-Example Questions (Turkish)
-“Bu makalenin temel katkısı nedir? 5 maddede özetle.”
-“Önerilen yöntemi adım adım açıkla. Varsayımlar neler?”
-“Deneylerde hangi veri setleri/metrikler kullanılmış? Sonuçları özetle.”
-“Kısıtlar (limitations) ve gelecek çalışmalar kısmı ne diyor?”
+## How to Use
+1. Put **text-selectable** (non-scanned) PDFs into the `data/` folder.
+2. Open the app and click **“PDF’leri indeksle”** once.
+3. Ask a question in Turkish (or pick a quick question from the sidebar).
 
-Notes / Limitations
-Scanned (image-only) PDFs may not work well without OCR.
-If you replace your PDFs and want a clean re-index, delete app_state.json and index again.
-This is a demo project: no formal benchmarking or evaluation metrics are included.
+## Example Questions (Turkish)
+- “Bu makalenin temel katkısı nedir? 5 maddede özetle.”
+- “Önerilen yöntemi adım adım açıkla. Varsayımlar neler?”
+- “Deneylerde hangi veri setleri/metrikler kullanılmış? Sonuçları özetle.”
+- “Kısıtlar (limitations) ve gelecek çalışmalar kısmı ne diyor?”
+
+## Notes / Limitations
+- Scanned (image-only) PDFs may not work well without **OCR**.
+- If you replace your PDFs and want a clean re-index, delete `app_state.json` and index again.
+- This is a demo project: no formal benchmarking or evaluation metrics are included.
